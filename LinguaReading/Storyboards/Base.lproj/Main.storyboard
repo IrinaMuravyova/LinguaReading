@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GJE-1h-9YL">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Библиотека-->
+        <scene sceneID="3cY-RN-FLG">
+            <objects>
+                <viewController id="Lle-8Q-Iko" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jQY-5m-rYM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4cT-28-b0X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Библиотека" image="books.vertical.fill" catalog="system" id="yzj-KH-HWq"/>
+                    <connections>
+                        <segue destination="puS-Vh-7aG" kind="show" id="Wph-A6-7xU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ee-Mr-lk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1721" y="206"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="tAO-yR-gJx">
+            <objects>
+                <tableViewController id="N42-No-RlS" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="6mr-31-lfH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" largeTitles="YES" id="KGx-i3-TvS">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Title" id="vpr-oo-n7U">
+                                    <leftBarButtonItems>
+                                        <barButtonItem title="Коллекции" id="iSE-c6-U6B"/>
+                                        <barButtonItem title="Уровень" id="14x-WO-hPB"/>
+                                        <barButtonItem title="Аудио" id="n9t-bc-O8L"/>
+                                    </leftBarButtonItems>
+                                    <barButtonItem key="rightBarButtonItem" title="Вид" id="lcb-2a-K10"/>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Qbs-lx-cE3">
+                                <rect key="frame" x="0.0" y="94" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qbs-lx-cE3" id="PCM-21-MN2">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="N42-No-RlS" id="2FZ-ol-ist"/>
+                            <outlet property="delegate" destination="N42-No-RlS" id="TWf-t9-8Lw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="NOq-fs-OgO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5l6-zy-KbQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-801" y="954"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ktn-Tu-J5i">
+            <objects>
+                <navigationController id="puS-Vh-7aG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fUQ-q7-GxT">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Коллекции" id="h1U-Tt-ZBl"/>
+                            <barButtonItem title="Аудио" id="ZaG-f8-Wqo"/>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Вид" id="XbV-gA-0XI"/>
+                    </navigationItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qgl-uI-fYh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="N42-No-RlS" kind="relationship" relationship="rootViewController" id="wwd-aE-sSQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v7a-Vb-8yB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1721" y="954"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="IiK-Qs-8rv">
+            <objects>
+                <viewController id="rhQ-q7-M7N" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u6o-eW-UVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="brS-4J-r7F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person.circle.fill" catalog="system" id="Yiz-XE-lTC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bwB-rp-xK3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-799" y="206"/>
+        </scene>
+        <!--Главная-->
+        <scene sceneID="742-CM-oOw">
+            <objects>
+                <viewController id="43x-Ur-jwv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wg4-WZ-gz4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qOZ-k9-wnj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Главная" image="book.fill" catalog="system" id="84T-Ar-dbH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F83-dT-qxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2608" y="207"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Xwy-u0-cN9">
+            <objects>
+                <tabBarController id="GJE-1h-9YL" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MlR-S3-5dY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="43x-Ur-jwv" kind="relationship" relationship="viewControllers" id="7nA-0U-L46"/>
+                        <segue destination="Lle-8Q-Iko" kind="relationship" relationship="viewControllers" id="ZKO-J4-wgs"/>
+                        <segue destination="rhQ-q7-M7N" kind="relationship" relationship="viewControllers" id="cP9-Bc-NTI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GuJ-ux-awT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1721" y="-601"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
+        <image name="books.vertical.fill" catalog="system" width="128" height="110"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
